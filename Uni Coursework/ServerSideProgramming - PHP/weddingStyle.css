@@ -1,0 +1,164 @@
+
+fieldset {
+    border: none;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Segoe UI", sans-serif;
+    font-size: xx-large;
+    color: white;
+    background-color: #29324E;
+
+    padding-top: 2em;
+}
+
+#catering {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.formSubContainer {
+    grid-area: dateSC;
+    display: grid;
+
+    justify-self: center;
+    justify-items: center;
+
+
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-template-areas: "SRadio BRadio" "SInput EInput" "party grade";
+
+    padding: 10px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dateInputContainer {
+    display: flex;
+    justify-content: center;
+    margin: 5px 5px 5px 5px;
+}
+
+#partySizeDiv {
+    grid-area: party;
+    display: flex;
+    justify-content: center;
+}
+
+#partySizeLabel {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    -moz-user-select: none;
+}
+
+#gradeDiv {
+    grid-area: grade;
+    display: flex;
+    justify-content: center;
+
+}
+
+#gradeLabel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    -moz-user-select: none;
+}
+
+fieldset {
+    padding: 0;
+}
+
+input[type=text] {
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#single {
+    grid-area: SRadio;
+}
+
+#between {
+    grid-area: BRadio;
+}
+
+#startDateContainer {
+    grid-area: SInput;
+}
+
+#endDateContainer {
+    grid-area: EInput;
+}
+
+.dateRadioLabel {
+    cursor: pointer;
+    margin: 0;
+    font-size: medium;
+}
+
+.dateContainer {
+    padding: 0;
+}
+
+
+#endDateInput {
+    cursor: context-menu;
+}
+
+#resultsTableContainer {
+    display: table;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 25px 25px 25px 25px;
+    margin: 10px auto;
+
+}
+
+
+tr:last-child {
+    background: transparent;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td {
+    padding: 4px;
+}
+
+th {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+input[type=text] {
+    font-size: 1.5rem;
+}
+
+input[type=radio] {
+    cursor: pointer;
+}
+
+input[type=date] {
+    margin: auto auto auto 10px;
+}
+
+input[type=number] {
+    align-self: center;
+}
+select {
+    margin: auto;
+}
+
+

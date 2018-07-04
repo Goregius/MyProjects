@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MiTunes Player</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html {
+            font-family: "Segoe UI", sans-serif !important;
+        }
+        body {
+            color: white;
+            background-color: black;
+            /*Used so that the divs inside won't be to squished*/
+            min-height: 500px;
+            min-width: 500px;
+        }
+        table {
+            width: 100%;
+            /*Removes the border between buttons*/
+            border-collapse: collapse;
+            /*Fixes the size of the cells so that the list button overflow ellipses works*/
+            table-layout: fixed;
+        }
+
+        div.mainContainer {
+            border: 1px solid #4c4c4f;
+            margin: 0.5% auto;
+            width: 99%;
+            /*height 95% wasn't working properly*/
+            height: 95vh;
+            min-height: 600px;
+            padding-top: 20px;
+            background-color: #181818;
+        }
+
+        div.contentContainer {
+            border: 1px solid transparent;
+            /*centres this*/
+            margin: 0 auto;
+            width: 95%;
+            height: 60%;
+
+            /*arranges children to be aligned horizontally*/
+            display: flex;
+            /*evenly spaces children about the centre*/
+            justify-content: space-between;
+            background-color: transparent;
+        }
+
+        div.listsDiv {
+            width: 32%;
+            height: 95%;
+            min-height: 350px;
+            border: 1px solid transparent;
+            display: flex;
+            /*Reverses the content arrangement direction vertically*/
+            flex-direction: column-reverse;
+            background-color: #181818;
+        }
+
+        input.listButton {
+            height: 40px;
+            width: 100%;
+            text-align: left;
+            font-size: xx-large;
+            padding-left:5px;
+            color: white;
+            background-color: transparent;
+            /*removes the white outline*/
+            outline: none;
+            /*removes the blue gradient outline when clicked on*/
+            border: none;
+            /*Adds ellipsis to the end of the text if the text overflows I decided to use this because I find that I prefer to not use x-direction scrollbars,
+            this shouldn't be an issue since the full album name appears in one of the middle container's header when clicked*/
+            text-overflow: ellipsis;
+
+            overflow: hidden;
+        }
+
+        div.albumList {
+            height: 87%;
+            width: 100%;
+            /*Centres this*/
+            margin: 0 auto;
+            overflow: auto;
+            border: 1px solid #4c4c4f;
+            background-color: #121212;
+        }
+
+        div.songList {
+            height: 87%;
+            width: 100%;
+            margin: 0 auto;
+            overflow: auto;
+            border: 1px solid #4c4c4f;
+            background-color: #121212;
+        }
+
+        div.detailsContainer {
+            width: 32%;
+            height: 95%;
+            position: relative;
+            min-height: 350px;
+            border: 1px solid #4c4c4f;
+            background-color: #121212;
+        }
+
+        div.detailsContainerBottom {
+            width: 100%;
+            position: absolute;
+            bottom: 5px;
+            display: flex;
+            /*Reverses the content arrangement direction vertically*/
+            flex-direction: column-reverse;
+        }
+        img.artwork {
+            height: 30vh;
+            /*Width is only affected by the height of the viewport*/
+            width: 30vh;
+            min-width: 180px;
+            min-height: 180px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        /*Makes the scrollbar more discrete on webkit browsers (chrome and safari support webkit; not firefox)*/
+        ::-webkit-scrollbar {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background:rgba(255,255,255,0.1);
+        }
+
+        div.keyboardOuterContainer {
+            border: none;
+            height: 35%;
+            width: 97%;
+            margin: 0 auto;
+        }
+
+        div.keyboardInnerContainer {
+            border: none;
+            height: 94%;
+            width: 70%;
+            background-color: #181818;
+            margin: 0 auto;
+        }
+
+        div.keyboardContainer {
+            border: none;
+            height: 90%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        div.keyboardRow {
+            /*Centres the keys*/
+            text-align: center;
+            height: 25%;
+        }
+
+        input.keyboardButton {
+            height: 90%;
+            width: 8%;
+            color: white;
+            background-color: #333333;
+            font-family: "Segoe UI", sans-serif;
+            /*vmax is 1.5% of the larger of vh and vw*/
+            font-size: 1.5vmax;
+            outline: none;
+            border: none;
+        }
+
+        input.space {
+            height: 90%;
+            width: 50%;
+            background-color: #333333;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 1.5vmax;
+            color: white;
+            outline: none;
+            border: none;
+        }
+
+        input.backspace {
+            height: 90%;
+            width: 13%;
+            background-color: #333333;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 1.5vmax;
+            color: white;
+            outline: none;
+            border: none;
+        }
+
+        input.clear {
+            height: 90%;
+            width: 10%;
+            background-color: #333333;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 1.5vmax;
+            color: white;
+            outline: none;
+            border: none;
+        }
+
+        input.searchBox {
+            height: 70%;
+            width: 50%;
+            min-height: 30px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            font-family: "Segoe UI", sans-serif;
+            font-size: 35px;
+        }
+    </style>
+    <script type="text/javascript" src="music.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="mainContainer" class="mainContainer">
+    <div id="contentContainer" class="contentContainer">
+        <div id="albumContainer" class="listsDiv">
+
+            <div id="albumList" class="albumList">
+                <table id="albumTable">
+                </table>
+            </div>
+            <h2 style="">Albums</h2>
+        </div>
+        <div id="songContainer" class="listsDiv">
+
+            <div id="songList" class="songList">
+                <table id="tracksTable">
+                </table>
+            </div>
+            <h3 id="songContainerAlbum" style="visibility: hidden;">*Album*</h3>
+            <h2 id="songContainerArtist" style="visibility: hidden;">*Artist*</h2>
+
+        </div>
+
+        <div id="detailsContainer" class="detailsContainer">
+            <div class="detailsContainerTop" style="visibility: hidden">
+                <img id="artworkImg" class="artwork">
+                <h3 id="detailsContainerAlbum" style="margin-left: 5px;">*Album*</h3>
+                <h2 id="detailsContainerArtist" style="margin-left: 5px;">*Artist*</h2>
+            </div>
+            <div class="detailsContainerBottom" style="visibility: hidden">
+                <audio controls='controls' id="musicControl" onended="onTrackEnded()" style="width: auto; margin-left: 5px; margin-right: 5px">
+                    <source id="audioSource">
+                    Your browser does not support the audio element.
+                </audio>
+                <h3 id="detailsContainerTrack" style="margin-left: 5px; margin-bottom: 2px;">*Track*</h3>
+                <h4 style="margin-left: 5px;">Track:</h4>
+            </div>
+        </div>
+    </div>
+
+    <div id="keyboardOuterContainer" class="keyboardOuterContainer">
+        <div id="keyboardInnerContainer" class="keyboardInnerContainer">
+            <div id="keyboardContainer" class="keyboardContainer">
+                <div class="keyboardRow">
+                    <input id="searchBar" type="text" placeholder="Filter"  readonly class="searchBox">
+                </div>
+                <div style="height: 5px"></div>
+                <div class="keyboardRow">
+                    <input id="keyQ" type="button" value="Q" class="keyboardButton">
+                    <input id="keyW" type="button" value="W" class="keyboardButton">
+                    <input id="keyE" type="button" value="E" class="keyboardButton">
+                    <input id="keyR" type="button" value="R" class="keyboardButton">
+                    <input id="keyT" type="button" value="T" class="keyboardButton">
+                    <input id="keyY" type="button" value="Y" class="keyboardButton">
+                    <input id="keyU" type="button" value="U" class="keyboardButton">
+                    <input id="keyI" type="button" value="I" class="keyboardButton">
+                    <input id="keyO" type="button" value="O" class="keyboardButton">
+                    <input id="keyP" type="button" value="P" class="keyboardButton">
+                </div>
+                <div class="keyboardRow">
+                    <input id="keyA" type="button" value="A" class="keyboardButton">
+                    <input id="keyS" type="button" value="S" class="keyboardButton">
+                    <input id="keyD" type="button" value="D" class="keyboardButton">
+                    <input id="keyF" type="button" value="F" class="keyboardButton">
+                    <input id="keyG" type="button" value="G" class="keyboardButton">
+                    <input id="keyH" type="button" value="H" class="keyboardButton">
+                    <input id="keyJ" type="button" value="J" class="keyboardButton">
+                    <input id="keyK" type="button" value="K" class="keyboardButton">
+                    <input id="keyL" type="button" value="L" class="keyboardButton">
+                </div>
+                <div class="keyboardRow">
+                    <input id="keyZ" type="button" value="Z" class="keyboardButton">
+                    <input id="keyX" type="button" value="X" class="keyboardButton">
+                    <input id="keyC" type="button" value="C" class="keyboardButton">
+                    <input id="keyV" type="button" value="V" class="keyboardButton">
+                    <input id="keyB" type="button" value="B" class="keyboardButton">
+                    <input id="keyN" type="button" value="N" class="keyboardButton">
+                    <input id="keyM" type="button" value="M" class="keyboardButton">
+                </div>
+                <div class="keyboardRow">
+                    <input id="clear" type="button" value="Clear" class="clear">
+                    <input id="space" type="button" value=" " class="space">
+                    <input id="backspace" type="button" value="Backspace" class="backspace">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

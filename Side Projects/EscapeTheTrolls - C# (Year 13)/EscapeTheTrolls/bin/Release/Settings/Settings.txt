@@ -1,0 +1,4 @@
+PlayerViewingRadius = 3
+TrollCount = 20
+HorizontalViewMultiplier = 1
+VerticalViewMultiplier = 1

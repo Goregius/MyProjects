@@ -1,0 +1,16 @@
+body {
+    font-family: "Apple Chancery", Times, serif;
+    background-color: #D6D6D6;
+}
+
+body,td,th {
+    color: #06F;
+}
+.larger {
+    font-size:larger;
+    text-align:right;
+}
+table {
+    margin-left:auto;
+    margin-right:auto;
+}

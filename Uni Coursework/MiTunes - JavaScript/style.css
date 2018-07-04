@@ -1,0 +1,213 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: "Segoe UI", sans-serif !important;
+}
+body {
+    color: white;
+    background-color: black;
+    /*Used so that the divs inside won't be to squished*/
+    min-height: 500px;
+    min-width: 500px;
+}
+table {
+    width: 100%;
+    /*Removes the border between buttons*/
+    border-collapse: collapse;
+    /*Fixes the size of the cells so that the list button overflow ellipses works*/
+    table-layout: fixed;
+}
+
+div.mainContainer {
+    border: 1px solid #4c4c4f;
+    margin: 0.5% auto;
+    width: 99%;
+    /*height 95% wasn't working properly*/
+    height: 95vh;
+    min-height: 600px;
+    padding-top: 20px;
+    background-color: #181818;
+}
+
+div.contentContainer {
+    border: 1px solid transparent;
+    /*centres this*/
+    margin: 0 auto;
+    width: 95%;
+    height: 60%;
+
+    /*arranges children to be aligned horizontally*/
+    display: flex;
+    /*evenly spaces children about the centre*/
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+div.listsDiv {
+    width: 32%;
+    height: 95%;
+    min-height: 350px;
+    border: 1px solid transparent;
+    display: flex;
+    /*Reverses the content arrangement direction vertically*/
+    flex-direction: column-reverse;
+    background-color: #181818;
+}
+
+input.listButton {
+    height: 40px;
+    width: 100%;
+    text-align: left;
+    font-size: xx-large;
+    padding-left:5px;
+    color: white;
+    background-color: transparent;
+    /*removes the white outline*/
+    outline: none;
+    /*removes the blue gradient outline when clicked on*/
+    border: none;
+    /*Adds ellipsis to the end of the text if the text overflows I decided to use this because I find that I prefer to not use x-direction scrollbars,
+    this shouldn't be an issue since the full album name appears in one of the middle container's header when clicked*/
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+}
+
+div.albumList {
+    height: 87%;
+    width: 100%;
+    /*Centres this*/
+    margin: 0 auto;
+    overflow: auto;
+    border: 1px solid #4c4c4f;
+    background-color: #121212;
+}
+
+div.songList {
+    height: 87%;
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    border: 1px solid #4c4c4f;
+    background-color: #121212;
+}
+
+div.detailsContainer {
+    width: 32%;
+    height: 95%;
+    position: relative;
+    min-height: 350px;
+    border: 1px solid #4c4c4f;
+    background-color: #121212;
+}
+
+div.detailsContainerBottom {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    /*Reverses the content arrangement direction vertically*/
+    flex-direction: column-reverse;
+}
+img.artwork {
+    height: 30vh;
+    /*Width is only affected by the height of the viewport*/
+    width: 30vh;
+    min-width: 180px;
+    min-height: 180px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+/*Makes the scrollbar more discrete on webkit browsers (chrome and safari support webkit; not firefox)*/
+::-webkit-scrollbar {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background:rgba(255,255,255,0.1);
+}
+
+div.keyboardOuterContainer {
+    border: none;
+    height: 35%;
+    width: 97%;
+    margin: 0 auto;
+}
+
+div.keyboardInnerContainer {
+    border: none;
+    height: 94%;
+    width: 70%;
+    background-color: #181818;
+    margin: 0 auto;
+}
+
+div.keyboardContainer {
+    border: none;
+    height: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+div.keyboardRow {
+    /*Centres the keys*/
+    text-align: center;
+    height: 25%;
+}
+
+input.keyboardButton {
+    height: 90%;
+    width: 8%;
+    color: white;
+    background-color: #333333;
+    font-family: "Segoe UI", sans-serif;
+    /*vmax is 1.5% of the larger of vh and vw*/
+    font-size: 1.5vmax;
+    outline: none;
+    border: none;
+}
+
+input.space {
+    height: 90%;
+    width: 50%;
+    background-color: #333333;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.5vmax;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+input.backspace {
+    height: 90%;
+    width: 13%;
+    background-color: #333333;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.5vmax;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+input.clear {
+    height: 90%;
+    width: 10%;
+    background-color: #333333;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.5vmax;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+input.searchBox {
+    height: 70%;
+    width: 50%;
+    min-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 35px;
+}

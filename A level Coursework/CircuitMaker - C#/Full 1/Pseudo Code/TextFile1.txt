@@ -1,0 +1,204 @@
+﻿Components : List of Component
+
+SUB SaveComponents()
+    resistorPositionsJson <- Components which is Json Serialized
+    SaveJsonString(resistorPositionsJson)
+END SUB
+
+SUB SaveJsonString(jsonString : string)
+
+    Open new save file dialog which only allows json files to be saved.
+
+    When the Ok button is pressed
+		Write jsonString to the location that the save file dialog shown to be, and with a name which is included in the dialog's textbox
+END SUB
+
+Components : List of Component
+
+SUB LoadComponents()
+	Open File Dialog
+	If the OK button is pressed THEN
+		TRY
+			text : string <- read text from the File Dialog's selected file directory
+			positions : list of BaseComponent <- text which is Json deserialized
+
+			Delete all Components on screen and in the Components
+			
+			FOR i <- 0 TO number of items in positions
+				AddComponent using positions
+			END FOR
+		END TRY
+	END IF
+END SUB
+
+private void LoadComponents()
+{
+    
+    // Show the dialog and get result.
+
+    OpenFileDialog openFileDialog = new OpenFileDialog { Filter = "Json file (*.json)|*.json" };
+    DialogResult result = openFileDialog.ShowDialog();
+    if (result != DialogResult.OK) return;
+
+    try
+    {
+        string text = File.ReadAllText(openFileDialog.SafeFileName);
+
+        var positions = JsonConvert.DeserializeObject<List<BaseComponent>>(text);
+
+        for (int i = 0; i < baseComponents.Count; i++)
+        {
+            baseComponents[i].ComponentType = (ComponentType)(componentTypes[i]);
+            baseComponents[i].Direction = (ComponentDirection)(directions[i]);
+        }
+
+        DeleteComponents();
+
+        for (int i = 0; i < baseComponents.Count; i++)
+        {
+            AddComponent(baseComponents[i], baseComponents[i].SavedLocation);
+            //Fixes the wrong components from being made.
+            System.Threading.Thread.Sleep(20);
+        }
+    }
+    catch (Exception exception)
+    {
+        MessageBox.Show(exception.Message);
+    }
+    Debug.WriteLine("After Load " + Components.Count().ToString());
+}
+
+SUB DeleteComponents()
+	FOREACH pictureBox in the circuit panel
+		Remove pictureBox
+	END FOREACH
+
+	Clear the Components list
+END SUB
+
+SUB DeleteComponents(pictureBox : PictureBox)
+	FOREACH panelPictureBox in the circuit panel
+		IF panelPictureBox = pictureBox THEN
+			componentIndex : int <- GetComponentIndex(panelPictureBox)
+			Remove a Component in Components at componentIndex
+			Remove panelPictureBox from the circuit panel
+		END IF
+	END FOREACH
+END SUB
+
+FUNCTION GetRotatedImage(p : PictureBox, componentIndex : int)
+	//To note, a Component's current image changes to the corresponding direction it is set to from, due to it's property set method.
+    direction <- direction of the Component from Components at componentIndex
+    
+	//if direction was up, the new direction would be right
+	Change the direction of the Component from Components at componentIndex by a direction that is 90 degrees clockwise of the original direction
+
+    RETURN Components[componentIndex].CurrentImage;
+END FUNCTION
+
+SUB RotateComponent(sender : object)
+	//((PictureBox)sender) is sender casted as a PictureBox
+
+    i : int
+    TRY
+        i <- GetComponentIndex((PictureBox)sender);
+
+        Image of ((PictureBox)sender) <- GetRotatedImage((PictureBox)sender, i);
+		Refresh ((PictureBox)sender)
+    CATCH (Exception exception)
+        Show MessageBox using the exeption message
+	END TRY
+END SUB
+
+SUB TranslateComponents(direction)
+	dy <- 0
+	dx <- 0
+
+	SWITCH CASE direction
+		CASE up:
+			dy <- -50
+			dx <- 0
+		CASE down:
+			dy <- 50
+			dx <- 0
+		CASE left:
+			dy <- 0
+			dx <- -50
+		CASE right:
+			dy <- 0
+			dx <- 50
+	END SWITCH CASE
+
+	//Checks if translating any PictureBoxes would result in a PictureBox escaping the bounds of the Circuit Panel
+	FOREACH pictureBox in the Circuit Panel
+		fX <- X component of pictureBox's location + dx
+		fY <- Y component of pictureBox's location + dy
+
+		IF fX < 0 OR fY < 0 OR fX > (Width of the Circuit Panel - Width of pictureBox) OR fY > (Height of the Circuit Panel - Width of pictureBox) THEN
+			RETURN
+		END IF
+	END FOREACH
+
+	//Translates the PictureBoxes
+	FOREACH pictureBox in the Circuit Panel
+		Location of pictureBox <- (X: X component of pictureBox's location + dx), (Y: Y component of pictureBox's location + dy)
+	END FOREACH
+
+	FOREACH component in the Components list
+		Location of component <- (X: X component of component's location + dx), (Y: X component of component's location + dy)
+	END FOREACH
+
+END SUB
+
+
+FUNCTION GetBaseNumber(symbol : string, comboBox : ComboBox, textBox, textBox)
+	prefixNum : double <- SiPrefixes item converted to double, using the key of the selected comboBox item
+	numDirect <- text of textBox, converted to double
+	baseNum <- numDirect * prefixNum
+
+	return baseNum
+END FUNCTION
+
+FUNCTION GetNumEngForm(baseValue : double)
+	power : double
+	positive : bool <- true
+
+	IF baseValue < 0 THEN
+		baseValue <- absolute value of baseValue
+		positive <- false
+	END IF
+
+	IF baseValue = 0 THEN
+		RETURN (0,"")
+	END IF
+
+	power <- Log 10 of baseValue, rounded down to the nearest integer
+	powerRemainder <- power MOD 3
+
+	IF powerRemainder >= 0 THEN
+		power <- power - powerRemainder
+	ELSE
+		power <- power - 3 + powerRemainder
+	END IF
+
+	finalValue <- baseValue * 10^(-power)
+	powerAmount <- baseValue * 10^(power)
+
+	IF powerAmount = 1 THEN
+		RETURN (finalValue, "")
+	END IF
+
+	prefix : character <- value from SiPrefixesInverse where key is powerAmount
+
+	RETURN (finalValue, prefix as string)
+END FUNCTION
+
+public static Tuple<double, string> GetNumEngForm(double baseValue)
+{
+    //the prefix character is searched for using the powerAmount into the SiPrefixesInverse dictionary.
+    char prefix = SiPrefixesInverse[powerAmount];
+    Debug.WriteLine("prefix: " + prefix);
+
+    //This returns the final value with its prefix.
+    return new Tuple<double, string>(finalValue, prefix.ToString());
+}

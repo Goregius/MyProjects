@@ -1,0 +1,6 @@
+PlayerViewingRadius = 3
+TrollCount = 15
+HorizontalViewMultiplier = 1
+VerticalViewMultiplier = 1
+Colour = True
+MaxUndo = 10

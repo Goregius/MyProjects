@@ -1,0 +1,22 @@
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.exe.config
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry_Happy.Form1.resources
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry_Happy.Resources.resources
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.vbproj.GenerateResource.Cache
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.exe
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.pdb
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.xml
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.exe
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.xml
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\documents\visual studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.pdb
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.exe.config
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.exe
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.xml
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.pdb
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.exe
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.pdb
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\bin\Debug\Barry Happy.xml
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.vbprojResolveAssemblyReference.cache
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry_Happy.Form1.resources
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry_Happy.Resources.resources
+C:\Users\George\Documents\Visual Studio 2015\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.vbproj.GenerateResource.Cache
+\\utccfp01.utccambridge.internal\student personal$\gwilkins13\Documents\Visual Studio 2013\Projects\Barry Happy\Barry Happy\obj\Debug\Barry Happy.vbprojResolveAssemblyReference.cache

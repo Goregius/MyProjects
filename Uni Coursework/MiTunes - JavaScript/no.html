@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<body style=background-color:#85dcb0;">
+
+<style>
+    .container {
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        padding-top: 10px;
+    }
+
+    .leftpane {
+        width: 30%;
+        height: 500px;
+        float: left;
+        background-color:#41b3a3;
+        border-collapse: collapse;
+        border: 2px solid #e27d60;
+        border-radius: 5px;
+        position: relative;
+        top: 10px;
+    }
+
+    .middlepane {
+        width: 30%;
+        height: 500px;
+        float: left;
+        background-color:#41b3a3;
+        border-collapse: collapse;
+        border: 2px solid #e27d60;
+        border-radius: 5px;
+        position: relative;
+        left: 5%;
+        top: 10px;
+    }
+
+    .rightpane {
+        width: 30%;
+        height: 500px;
+        float: right;
+        background-color:#41b3a3;
+        border-collapse: collapse;
+        border: 2px solid #e27d60;
+        border-radius: 5px;
+        position: relative;
+        left: 5%;
+        top: 10px;
+    }
+
+    .bottompane {
+        width: 100%;
+        height: 300px;
+        border-collapse: collapse;
+        background-color:#41b3a3;
+        border: 2px solid #e27d60;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .keyboardbuttons {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+    }
+
+    .keyboardbuttons:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .header {
+        font-family: "Segoe UI",Arial,sans-serif;
+        text-align: center;
+        color: floralwhite;
+    }
+
+</style>
+
+<div class="container1">
+
+    <div class="leftpane">
+
+        <h1>
+            <header class="header">Albums</header>
+        </h1>
+
+    </div>
+
+    <div class="middlepane">
+
+        <h1>
+            <header class="header">Songs</header>
+        </h1>
+
+    </div>
+
+    <div class="rightpane">
+
+        <h1>
+            <header class="header">Information</header>
+        </h1>
+
+    </div>
+
+</div>
+
+<div class="container2">
+
+    <div class="bottompane">
+
+        <input id="tbInput" type="text" />
+
+        <div id="VirtualKeyboard">
+            <input id="btnQ" type="button" class="keyboardbuttons" value="Q" onclick="input('Q');" />
+            <input id="btnW" type="button" class="keyboardbuttons" value="W" onclick="input('W');" />
+            <input id="btnE" type="button" class="keyboardbuttons" value="E" onclick="input('E');" />
+            <input id="btnR" type="button" class="keyboardbuttons" value="R" onclick="input('R');" />
+            <input id="btnT" type="button" class="keyboardbuttons" value="T" onclick="input('T');" />
+            <input id="btnY" type="button" class="keyboardbuttons" value="Y" onclick="input('Y');" />
+            <input id="btnU" type="button" class="keyboardbuttons" value="U" onclick="input('U');" />
+            <input id="btnI" type="button" class="keyboardbuttons" value="I" onclick="input('I');" />
+            <input id="btnO" type="button" class="keyboardbuttons" value="O" onclick="input('O');" />
+            <input id="btnP" type="button" class="keyboardbuttons" value="P" onclick="input('P');" />
+            <br />
+            <input id="btnA" type="button" class="keyboardbuttons" value="A" onclick="input('A');" />
+            <input id="btnS" type="button" class="keyboardbuttons" value="S" onclick="input('S');" />
+            <input id="btnD" type="button" class="keyboardbuttons" value="D" onclick="input('D');" />
+            <input id="btnF" type="button" class="keyboardbuttons" value="F" onclick="input('F');" />
+            <input id="btnG" type="button" class="keyboardbuttons" value="G" onclick="input('G');" />
+            <input id="btnH" type="button" class="keyboardbuttons" value="H" onclick="input('H');" />
+            <input id="btnJ" type="button" class="keyboardbuttons" value="J" onclick="input('J');" />
+            <input id="btnK" type="button" class="keyboardbuttons" value="K" onclick="input('K');" />
+            <input id="btnL" type="button" class="keyboardbuttons" value="L" onclick="input('L');" />
+            <br />
+            <input id="btnZ" type="button" class="keyboardbuttons" value="Z" onclick="input('Z');" />
+            <input id="btnX" type="button" class="keyboardbuttons" value="X" onclick="input('X');" />
+            <input id="btnC" type="button" class="keyboardbuttons" value="C" onclick="input('C');" />
+            <input id="btnV" type="button" class="keyboardbuttons" value="V" onclick="input('V');" />
+            <input id="btnB" type="button" class="keyboardbuttons" value="B" onclick="input('B');" />
+            <input id="btnN" type="button" class="keyboardbuttons" value="N" onclick="input('N');" />
+            <input id="btnM" type="button" class="keyboardbuttons" value="M" onclick="input('M');" />
+            <input id="btnDELETE" type="button" class="keyboardbuttons" value="BACKSPACE" onclick="del();" />
+            <br />
+            <input id="btnSPACE" type="button" class="keyboardbuttons" value="SPACE" onclick="input(' ');" />
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

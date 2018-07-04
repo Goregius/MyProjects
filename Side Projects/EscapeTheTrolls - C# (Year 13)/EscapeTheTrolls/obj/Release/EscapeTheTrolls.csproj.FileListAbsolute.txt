@@ -1,0 +1,5 @@
+C:\Users\George\Documents\Visual Studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\bin\Release\EscapeTheTrolls.exe.config
+C:\Users\George\Documents\Visual Studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\bin\Release\EscapeTheTrolls.exe
+C:\Users\George\Documents\Visual Studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\bin\Release\EscapeTheTrolls.pdb
+C:\Users\George\Documents\Visual Studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\obj\Release\EscapeTheTrolls.exe
+C:\Users\George\Documents\Visual Studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\obj\Release\EscapeTheTrolls.pdb

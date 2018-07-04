@@ -1,0 +1,13 @@
+c:\users\george\documents\visual studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\bin\Debug\EscapeTheTrolls.exe.config
+c:\users\george\documents\visual studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\bin\Debug\EscapeTheTrolls.exe
+c:\users\george\documents\visual studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\bin\Debug\EscapeTheTrolls.pdb
+c:\users\george\documents\visual studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.csprojResolveAssemblyReference.cache
+c:\users\george\documents\visual studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.exe
+c:\users\george\documents\visual studio 2017\Projects\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.pdb
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\bin\Debug\EscapeTheTrolls.exe.config
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\bin\Debug\EscapeTheTrolls.exe
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\bin\Debug\EscapeTheTrolls.pdb
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.csprojResolveAssemblyReference.cache
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.csproj.CoreCompileInputs.cache
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.exe
+D:\Chrome Downloads\code\EscapeTheTrolls\EscapeTheTrolls\obj\Debug\EscapeTheTrolls.pdb

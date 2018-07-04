@@ -1,0 +1,201 @@
+[
+  {
+    "ComponentType": 0,
+    "Direction": 0,
+    "ID": 618880424,
+    "Location": "500, 100",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  }
+  ,
+  {
+    "ComponentType": 5,
+    "Direction": 3,
+    "ID": 824989774,
+    "Location": "600, 100",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 0,
+    "ID": 1031099124,
+    "Location": "400, 100",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 6,
+    "Direction": 0,
+    "ID": 375467817,
+    "Location": "450, 100",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 0,
+    "ID": 581577167,
+    "Location": "450, 50",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 1,
+    "Direction": 0,
+    "ID": 2073429507,
+    "Location": "500, 50",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 3,
+    "ID": 132055210,
+    "Location": "550, 50",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 6,
+    "Direction": 0,
+    "ID": 1623907550,
+    "Location": "550, 100",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 2,
+    "ID": 1830016900,
+    "Location": "400, 150",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 3,
+    "Direction": 2,
+    "ID": 1174385593,
+    "Location": "400, 200",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 3,
+    "ID": 2036126250,
+    "Location": "400, 250",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 2,
+    "ID": 94751953,
+    "Location": "400, 300",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 0,
+    "ID": 1586604293,
+    "Location": "450, 300",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 2,
+    "Direction": 0,
+    "ID": 1792713643,
+    "Location": "500, 300",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 0,
+    "ID": 1137082336,
+    "Location": "550, 300",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 7,
+    "Direction": 0,
+    "ID": 1343191686,
+    "Location": "600, 300",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 2,
+    "ID": 687560379,
+    "Location": "600, 350",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 1,
+    "ID": 893669729,
+    "Location": "650, 350",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 5,
+    "Direction": 3,
+    "ID": 238038422,
+    "Location": "650, 300",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 2,
+    "ID": 1099779079,
+    "Location": "600, 250",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 2,
+    "ID": 1936000112,
+    "Location": "600, 200",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  },
+  {
+    "ComponentType": 4,
+    "Direction": 2,
+    "ID": 650257122,
+    "Location": "600, 150",
+    "Resistance": 0.0,
+    "Current": 0.0,
+    "Voltage": 0.0
+  }
+]
