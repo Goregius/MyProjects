@@ -1,0 +1,49 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+$primary-color: #009BD6;
+
+@mixin primary-scheme {
+    color: #fff !important;
+    background-color: $primary-color !important;   
+}
+html, body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mia-navbar {
+    @include primary-scheme;
+}
+
+.btn-primary {
+    @include primary-scheme;
+}
+
+.mia-card-header {
+    @include primary-scheme;
+}
+
+.card > .card-header {
+    @include primary-scheme;
+    text-align: center;
+}
+
+@media (min-width: 575.98px) {
+    .mia-block-semi {
+        margin: auto;
+        width: 50% !important;
+    }
+}
+
